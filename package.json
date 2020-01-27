@@ -1,0 +1,44 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The monorepo for Lit XML",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap && link-parent-bin",
+    "all": "npm run clean && npm run build && npm run lint && npm run test",
+    "build": "tsc -b",
+    "clean": "rimraf packages/*/dist",
+    "test": "lerna run test",
+    "lint": "npm run lint:json && npm run lint:ts",
+    "lint:json": "prettier --list-different .eslintrc *.json",
+    "lint:ts": "eslint --ext .js,.ts --ignore-path .gitignore ."
+  },
+  "author": {
+    "email": "jansennico@gmail.com",
+    "name": "Nico Jansen",
+    "url": "https://github.com/nicojs"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "lerna": "^3.20.2",
+    "link-parent-bin": "^1.0.2",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "source-map-support": "^0.5.16",
+    "typescript": "^3.7.5"
+  }
+}

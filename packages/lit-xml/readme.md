@@ -1,0 +1,67 @@
+# Lit XML 🔥
+
+> Burning your XML documents to the ground? Yes please. In the mean time, let's use lit-xml.
+
+A small utility to help construction of XML documents using a simple [tagged template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates). Because you sometimes have to XML.
+
+## 🗺️ Installation
+
+Install `lit-xml` locally within your project folder, like so:
+
+```shell
+npm i lit-xml
+```
+
+Or with yarn:
+
+```shell
+yarn add lit-xml
+```
+
+## 🎁 Usage
+
+A simple example:
+
+```ts
+import { xml } from 'lit-xml';
+
+const xmlFragment = xml`<foo bar="${41 + 1}">Some ${'<content>'}</foo>`.toString();
+// => '<foo bar="42">Some &lt;content&gt;</foo>'
+```
+
+Importing `xml` will give you the _default xml template literal_. It will sanitize values, but not validate on well formed xml for performance reasons. 
+
+A more advanced scenario:
+
+```ts
+import { createLitXml } from 'lit-xml';
+const xml = createLitXml({
+  format: true,
+  validators: [validators.isWellFormed],
+  indent: 2
+});
+
+
+xml`<foo bar="${41 + 1}"><baz></baz></foo>`.toString();
+// => `<foo bar="42">
+//       <baz/> 
+//     </foo>`
+
+xml`<foo><foo>`.toString();
+// InvalidXmlError! Error on line 1: Closing tag 'foo' is expected inplace of 'bar'. 
+```
+
+In this example, the `createLitXml` factory method is used to create a _custom xml template literal_. 
+In this case it will validate that the XML document is well-formed and it will be formatted (with an indent of 2 spaces).
+
+## 🚀 Features
+
+🚿 Interpolated values are sanitized  
+📐 Configurable [well formed](https://www.w3resource.com/xml/well-formed.php) validation using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)    
+💄 Configurable formatting output using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)  
+
+## 💭 Motivation
+
+JavaScript is not-XML friendly. We're missing good libraries to construct larger XML documents without relying on template libraries like [ejs](https://www.npmjs.com/package/ejs) or [handlebars](https://www.npmjs.com/package/handlebars). 
+
+This library is an attempt to solve this problem using the simple feature of [tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates). It is inspired by the awesome [lit-html](https://www.npmjs.com/package/lit-html).
