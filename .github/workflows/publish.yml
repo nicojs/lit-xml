@@ -1,4 +1,4 @@
-name: publish
+name: Publish
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
     - name: Set NPM Env for publish
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
     - name: Publish
-      run: npx lerna publish from-git
+      run: npx lerna publish from-git --yes
 
