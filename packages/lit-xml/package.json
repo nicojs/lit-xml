@@ -25,7 +25,7 @@
     "directory": "packages/lit-xml",
     "type": "git"
   },
-  "homepage": "https://github.com/nicojs/lit-xml/raw/packages/lit-xml#readme",
+  "homepage": "https://github.com/nicojs/lit-xml/tree/master/packages/lit-xml#readme",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=10"
