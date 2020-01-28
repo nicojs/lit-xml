@@ -11,8 +11,9 @@
     "clean": "rimraf packages/*/dist",
     "test": "lerna run test",
     "lint": "npm run lint:json && npm run lint:ts",
-    "lint:json": "prettier --list-different .eslintrc *.json",
-    "lint:ts": "eslint --ext .js,.ts --ignore-path .gitignore ."
+    "lint:json": "prettier --check .eslintrc *.json",
+    "lint:ts": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "version": "prettier --write lerna.json && git add lerna.json"
   },
   "author": {
     "email": "jansennico@gmail.com",
