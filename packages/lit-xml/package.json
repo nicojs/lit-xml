@@ -18,7 +18,7 @@
     "fast-xml-parser": "^3.16.0"
   },
   "scripts": {
-    "test": "nyc --exclude-after-remap=false --exclude dist/test/** --check-coverage --reporter=html --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha dist/test/**/*.js"
+    "test": "nyc --exclude-after-remap=false --exclude \"dist/test/**\" --check-coverage --reporter=html --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha \"dist/test/**/*.js\""
   },
   "repository": {
     "url": "https://github.com/nicojs/lit-xml.git",
