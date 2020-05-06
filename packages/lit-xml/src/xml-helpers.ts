@@ -15,6 +15,9 @@ export function valueToString(value: unknown): string {
   if (isJsonSerializable(value)) {
     return sanitize(value.toJSON());
   }
+  if (Array.isArray(value)) {
+    return value.map(valueToString).join('');
+  }
   return sanitize((value as any).toString());
 }
 

@@ -49,6 +49,13 @@ xml`<foo bar="${41 + 1}"><baz></baz></foo>`.toString();
 
 xml`<foo><foo>`.toString();
 // InvalidXmlError! Error on line 1: Closing tag 'foo' is expected inplace of 'bar'. 
+
+const people = [{ name: 'foo' }, { name: 'bar' }];
+xml`<people>${people.map((p) => xml`<person>${p.name}</person>`)}</people>`.toString();
+// => `<people>
+//      <person>foo</person>
+//      <person>bar</person>
+//    </people>`
 ```
 
 In this example, the `createLitXml` factory method is used to create a _custom xml template literal_. 
@@ -56,6 +63,7 @@ In this case it will validate that the XML document is well-formed and it will b
 
 ## 🚀 Features
 
+🧩 Construct xml documents using plain JS like [conditional operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) and [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  
 🚿 Interpolated values are sanitized  
 📐 Configurable [well formed](https://www.w3resource.com/xml/well-formed.php) validation using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)    
 💄 Configurable formatting output using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)  
