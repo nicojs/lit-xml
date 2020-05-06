@@ -14,4 +14,11 @@ describe('LitXml integration', () => {
     const xml = createLitXml({ format: true });
     expect(xml`<baz><foo bar="${true}">${42}</foo></baz>`.toString()).eq('<baz>\n  <foo bar="true">42</foo>\n</baz>\n');
   });
+
+  it('should allow `arr.map` to construct xml documents', () => {
+    const people = [{ name: 'foo' }, { name: 'bar' }];
+    expect(xml`<people>${people.map((p) => xml`<person>${p.name}</person>`)}</people>`.toString()).eq(
+      '<people><person>foo</person><person>bar</person></people>'
+    );
+  });
 });

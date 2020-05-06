@@ -30,6 +30,9 @@ describe('xml-helpers', () => {
     it('should be able to handle undefined', () => {
       expect(valueToString(undefined)).eq('');
     });
+    it('should be able to handle arrays', () => {
+      expect(valueToString([1, '2', '<>'])).eq('12&lt;&gt;');
+    });
     it('should be able to handle Dates', () => {
       expect(valueToString(new Date(Date.UTC(2010, 1, 1, 23, 23, 1)))).eq('2010-02-01T23:23:01.000Z');
     });
