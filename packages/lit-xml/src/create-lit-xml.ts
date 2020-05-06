@@ -4,7 +4,7 @@ import { XmlFragment } from './xml-fragment';
 const DEFAULT_OPTIONS: Readonly<LitXmlOptions> = {
   format: false,
   indent: 2,
-  validators: []
+  validators: [],
 };
 
 export type XmlTemplateLiteral = (xmlLiterals: TemplateStringsArray, ...values: unknown[]) => XmlFragment;

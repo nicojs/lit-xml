@@ -6,7 +6,7 @@ export class XmlFragment {
 
   public toString(): string {
     const xml = this.toStringRaw();
-    this.options.validators.forEach(validator => validator(xml));
+    this.options.validators.forEach((validator) => validator(xml));
     return format(xml, this.options);
   }
 

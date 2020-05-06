@@ -36,7 +36,7 @@ const fastXmlOptions: Partial<J2xOptions & X2jOptions> = {
   cdataPositionChar: '\\c',
   parseTrueNumberOnly: false,
   arrayMode: false,
-  supressEmptyNode: true
+  supressEmptyNode: true,
 };
 
 export function format(xml: string, { format, indent }: Pick<LitXmlOptions, 'format' | 'indent'>): string {
@@ -54,7 +54,7 @@ const XML_ESCAPE_MAP = Object.freeze({
   ["'"]: '&apos;',
   ['"']: '&quot;',
   ['<']: '&lt;',
-  ['>']: '&gt;'
+  ['>']: '&gt;',
 });
 
 const XML_SPECIAL_CHAR_REGEX = new RegExp(`([${Object.keys(XML_ESCAPE_MAP).join('')}])`, 'g');
