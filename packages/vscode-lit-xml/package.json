@@ -65,16 +65,6 @@
           "meta.template.expression.ts": "typescript"
         }
       }
-    ],
-    "jsonValidation": [
-      {
-        "fileMatch": "jsconfig*.json",
-        "url": "./schemas/tsconfig.schema.json"
-      },
-      {
-        "fileMatch": "tsconfig*.json",
-        "url": "./schemas/tsconfig.schema.json"
-      }
     ]
   },
   "devDependencies": {
