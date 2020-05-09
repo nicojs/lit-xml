@@ -8,7 +8,7 @@
     "postinstall": "lerna bootstrap && link-parent-bin",
     "start": "tsc -b --watch",
     "all": "npm run clean && npm run build && npm run lint && npm run test",
-    "build": "tsc -b",
+    "build": "tsc -b && lerna run build --stream",
     "clean": "rimraf packages/*/dist",
     "test": "lerna run test",
     "lint": "npm run lint:json && npm run lint:ts",
