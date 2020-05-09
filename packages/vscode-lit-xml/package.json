@@ -1,11 +1,11 @@
 {
   "name": "vscode-lit-xml",
   "displayName": "lit-xml",
-  "description": "Syntax highlighting and IntelliSense for html inside of JavaScript and TypeScript tagged template strings",
+  "description": "Syntax highlighting xml inside of JavaScript and TypeScript lit-xml tagged template strings",
   "publisher": "hugo-vrijswijk",
   "license": "Apache-2.0",
   "version": "0.2.0",
-  "main": "dist/src/index.js",
+  "main": "dist/src/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/nicojs/lit-xml.git"
@@ -15,7 +15,7 @@
     "build": "vsce package"
   },
   "engines": {
-    "vscode": "^1.29.0"
+    "vscode": "^1.32.0"
   },
   "categories": [
     "Programming Languages"

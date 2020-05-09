@@ -3,6 +3,9 @@
   "references": [
     {
       "path": "packages/lit-xml"
+    },
+    {
+      "path": "packages/vscode-lit-xml"
     }
   ]
 }
