@@ -1,0 +1,46 @@
+{
+  "name": "vscode-lit-xml",
+  "displayName": "vscode-lit-xml",
+  "description": "",
+  "publisher": "hugo-vrijswijk",
+  "version": "0.2.0",
+  "main": "dist/src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicojs/lit-xml.git"
+  },
+  "engines": {
+    "vscode": "^1.45.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "",
+        "aliases": [
+          "",
+          ""
+        ],
+        "extensions": [
+          ""
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "",
+        "scopeName": "",
+        "path": "./syntaxes/.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.44.0"
+  },
+  "dependencies": {
+    "vsce": "^1.75.0"
+  }
+}

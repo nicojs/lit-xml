@@ -1,0 +1,1 @@
+# vscode-lit-xml README
