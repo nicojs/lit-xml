@@ -1,2 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-export function activate() {}
+export function activate() {
+  // Entrypoint of the extension. Since this extension has no functionality beyond highlighting it is empty
+}
