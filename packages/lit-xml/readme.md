@@ -64,9 +64,10 @@ In this case it will validate that the XML document is well-formed and it will b
 ## 🚀 Features
 
 🧩 Construct xml documents using plain JS like [conditional operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) and [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  
+💄 [vscode plugin](https://github.com/nicojs/lit-xml/tree/master/packages/vscode-lit-xml#lit-xml-vs-code-extension-) for syntax highlighting  
 🚿 Interpolated values are sanitized  
 📐 Configurable [well formed](https://www.w3resource.com/xml/well-formed.php) validation using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)    
-💄 Configurable formatting output using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)  
+👓 Configurable formatting output using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)  
 
 ## 💭 Motivation
 
