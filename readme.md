@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" height="200" src="packages/vscode-lit-xml/images/icon.png">
+  <img width="200" height="200" src="https://raw.githubusercontent.com/nicojs/lit-xml/master/packages/vscode-lit-xml/images/icon.png">
 </p>
 
 Welcome to the Lit XML monorepo. Info about contributing and building the application can be found here.

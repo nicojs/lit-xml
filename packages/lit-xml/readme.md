@@ -1,7 +1,7 @@
 # Lit XML 🔥
 
 <p align="center">
-  <img width="200" height="200" src="../vscode-lit-xml/images/icon.png">
+  <img width="200" height="200" src="https://raw.githubusercontent.com/nicojs/lit-xml/master/packages/vscode-lit-xml/images/icon.png">
 </p>
 
 > Burning your XML documents to the ground? Yes please. In the mean time, let's use lit-xml.
