@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="200" height="200" src="https://raw.githubusercontent.com/nicojs/lit-xml/master/packages/vscode-lit-xml/images/icon.png">
+</p>
+
 Welcome to the Lit XML monorepo. Info about contributing and building the application can be found here.
 
 For more information about Lit XML, please see [that readme](https://github.com/nicojs/lit-xml/tree/master/packages/lit-xml#readme).
