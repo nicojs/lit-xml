@@ -42,7 +42,7 @@
           "source.jsx",
           "source.ts",
           "source.tsx",
-          "text.xml"
+          "text.html"
         ],
         "scopeName": "text.lit-xml",
         "path": "./syntaxes/lit-xml.json",
@@ -57,7 +57,7 @@
           "source.jsx",
           "source.ts",
           "source.tsx",
-          "text.xml"
+          "text.html"
         ],
         "scopeName": "text.lit-xml.string.injection",
         "path": "./syntaxes/lit-xml-string-injection.json",
