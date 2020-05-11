@@ -1,0 +1,74 @@
+{
+  "name": "vscode-lit-xml",
+  "displayName": "lit-xml",
+  "description": "Syntax highlighting xml inside of JavaScript and TypeScript lit-xml tagged template strings",
+  "publisher": "hugo-vrijswijk",
+  "license": "Apache-2.0",
+  "version": "0.2.0",
+  "main": "dist/src/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicojs/lit-xml.git"
+  },
+  "scripts": {
+    "publish": "vsce publish",
+    "build": "vsce package"
+  },
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "lit-xml",
+    "javascript",
+    "typescript",
+    "xml",
+    "template"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html"
+        ],
+        "scopeName": "text.lit-xml",
+        "path": "./syntaxes/lit-xml.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.xml": "xml"
+        }
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html"
+        ],
+        "scopeName": "text.lit-xml.string.injection",
+        "path": "./syntaxes/lit-xml-string-injection.json",
+        "embeddedLanguages": {
+          "meta.template.expression.ts": "typescript"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^1.75.0"
+  },
+  "dependencies": {}
+}

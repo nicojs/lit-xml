@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "parent"
+    },
+    {
+      "path": "packages/lit-xml"
+    },
+    {
+      "path": "packages/vscode-lit-xml"
+    }
+  ],
+  "settings": {
+    "task.autoDetect": "off"
+  }
+}

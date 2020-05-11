@@ -1,0 +1,10 @@
+{
+  "fileTypes": [],
+  "injectionSelector": "L:meta.embedded.block.xml meta.tag",
+  "patterns": [
+    {
+      "include": "source.ts#template-substitution-element"
+    }
+  ],
+  "scopeName": "text.lit-xml.string.injection"
+}
