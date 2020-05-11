@@ -11,7 +11,7 @@
     "url": "https://github.com/nicojs/lit-xml.git"
   },
   "scripts": {
-    "publish": "vsce publish -p $VSCODE_TOKEN",
+    "publish": "vsce publish",
     "build": "vsce package"
   },
   "engines": {

@@ -16,9 +16,7 @@ jobs:
       run: npm run all
     - name: Set NPM Env for publish
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-    - name: Copy changelog to VS Code extension
-      run: cp CHANGELOG.md packages/vscode-lit-xml/
+    - name: Login to VS Code extension hub
+      run: 'npx vsce login hugo-vrijswijk -p ${{ secrets.VSCODE_TOKEN }}'
     - name: Publish
       run: npx lerna publish from-git --yes
-      env:
-        VSCODE_TOKEN: ${{ secrets.VSCODE_TOKEN }}
