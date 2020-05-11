@@ -1,3 +1,5 @@
+[![](https://vsmarketplacebadge.apphb.com/version/hugo-vrijswijk.vscode-lit-xml.svg)](https://marketplace.visualstudio.com/items?itemName=hugo-vrijswijk.vscode-lit-xml)
+
 # Lit XML VS Code extension 🔥
 
 Enables XML highlighting for [lit-xml](../lit-xml/readme.md) tags.
