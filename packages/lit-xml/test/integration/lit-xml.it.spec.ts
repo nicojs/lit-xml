@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { xml, createLitXml } from '../../src';
+import { xml, createLitXml, StrictXmlTemplateLiteral, XmlPrimitive } from '../../src';
 
 describe('LitXml integration', () => {
   it('should sanitize XML', () => {
@@ -20,5 +20,42 @@ describe('LitXml integration', () => {
     expect(xml`<people>${people.map((p) => xml`<person>${p.name}</person>`)}</people>`.toString()).eq(
       '<people><person>foo</person><person>bar</person></people>'
     );
+  });
+
+  /*
+   * Only type-check these tests. Running is not needed
+   */
+  describe.skip('strictTemplateValues', () => {
+    let strictXml: StrictXmlTemplateLiteral;
+    beforeEach(() => {
+      strictXml = createLitXml({ strictTemplateValues: true });
+    });
+
+    it('should allow xml primitives in the template', () => {
+      const primitives: XmlPrimitive[] = ['foo', 0, 1, true, false, BigInt(10), strictXml`<foo></foo>`, [strictXml`<foo></foo>`]];
+      primitives.forEach((p) => strictXml`<foo>${p}</foo>`);
+    });
+
+    it('should not allow non-primitive values in the template', () => {
+      const nonPrimitives = [{ foo: 'bar' }, new Date()];
+      nonPrimitives.forEach(
+        (p) =>
+          // @ts-expect-error non-primitives are not allowed
+          strictXml`<foo>${p}</foo>`
+      );
+    });
+
+    it('should not allow null or undefined values in the template', () => {
+      const nonPrimitives: (null | undefined)[] = [null, undefined];
+      nonPrimitives.forEach(
+        (p) =>
+          // @ts-expect-error null or undefined are not allowed
+          strictXml`<foo>${p}</foo>`
+      );
+    });
+
+    it('should allow any value when strictTemplateValues is false', () => {
+      xml`<foo>${new Date()}</foo>`;
+    });
   });
 });
