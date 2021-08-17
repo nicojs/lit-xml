@@ -13,5 +13,8 @@
   ],
   "settings": {
     "task.autoDetect": "off"
+  },
+  "extensions": {
+    "recommendations": ["streetsidesoftware.code-spell-checker", "esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "hugo-vrijswijk.vscode-lit-xml"]
   }
 }

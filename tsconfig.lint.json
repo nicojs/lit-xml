@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig.settings.json",
-  "include": ["packages/lit-xml", "packages/vscode-lit-xml"]
+  "include": ["packages/lit-xml"]
 }
