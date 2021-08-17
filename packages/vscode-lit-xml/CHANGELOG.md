@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/nicojs/lit-xml/compare/v0.4.0...v0.4.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* **vscode-lit-xml:** remove activation point from extension ([0dcc3ef](https://github.com/nicojs/lit-xml/commit/0dcc3ef3804c9cc3f8afd798c0b0ea75aa25ac97))
+
+
+
+
+
 # [0.4.0](https://github.com/nicojs/lit-xml/compare/v0.3.1...v0.4.0) (2021-04-12)
 
 **Note:** Version bump only for package vscode-lit-xml
