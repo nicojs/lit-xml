@@ -62,6 +62,9 @@
       }
     ]
   },
+  "capabilities": {
+    "virtualWorkspaces": true
+  },
   "devDependencies": {
     "vsce": "^1.75.0"
   }
