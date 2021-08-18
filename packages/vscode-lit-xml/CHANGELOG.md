@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/nicojs/lit-xml/compare/v0.4.3...v0.4.4) (2021-08-18)
+
+
+### Bug Fixes
+
+* **vscode-lit-xml:** set virtualWorkspaces: true ([a5181ea](https://github.com/nicojs/lit-xml/commit/a5181ea0704858ef486c80703915118615de6eef))
+
+
+
+
+
 ## [0.4.3](https://github.com/nicojs/lit-xml/compare/v0.4.2...v0.4.3) (2021-08-18)
 
 **Note:** Version bump only for package vscode-lit-xml
