@@ -16,7 +16,7 @@ jobs:
           # Fetch all commits, used by lerna
           fetch-depth: 0
       # Fetch all tags
-      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - run: git fetch --all
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
