@@ -6,7 +6,7 @@
 
 > Burning your XML documents to the ground? Yes please. In the mean time, let's use lit-xml.
 
-A small utility to help construction of XML documents using a simple [tagged template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates). Because you sometimes have to XML.
+A small utility to help construction of XML documents using a simple [tagged template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates). Because you sometimes have to use XML 🤷‍♀️.
 
 ## 🗺️ Installation
 
