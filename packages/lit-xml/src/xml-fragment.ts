@@ -14,12 +14,10 @@ export class XmlFragment {
    * @internal
    */
   public toStringRaw() {
-    const xmlBuilder: string[] = [];
+    let stringBuilder = '';
     for (let i = 0; i < this.values.length; i++) {
-      xmlBuilder.push(this.xmlLiterals[i]);
-      xmlBuilder.push(valueToString(this.values[i]));
+      stringBuilder = stringBuilder.concat(this.xmlLiterals[i], valueToString(this.values[i]));
     }
-    xmlBuilder.push(this.xmlLiterals[this.xmlLiterals.length - 1]);
-    return xmlBuilder.join('');
+    return stringBuilder + this.xmlLiterals[this.xmlLiterals.length - 1];
   }
 }
