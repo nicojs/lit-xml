@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.6](https://github.com/nicojs/lit-xml/compare/v0.4.5...v0.4.6) (2021-11-10)
+
+
+### Performance Improvements
+
+* improve XmlFragment toString rendering performance ([8589dc3](https://github.com/nicojs/lit-xml/commit/8589dc37ec6770300518c79f5aa8bbf11dd2852b))
+
+
+
+
+
 ## [0.4.5](https://github.com/nicojs/lit-xml/compare/v0.4.4...v0.4.5) (2021-09-03)
 
 
