@@ -66,6 +66,6 @@
     "virtualWorkspaces": true
   },
   "devDependencies": {
-    "vsce": "^1.75.0"
+    "vsce": "^2.2.0"
   }
 }
