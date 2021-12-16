@@ -28,6 +28,6 @@
   "homepage": "https://github.com/nicojs/lit-xml/tree/master/packages/lit-xml#readme",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   }
 }
