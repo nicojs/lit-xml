@@ -2,7 +2,8 @@
   "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
     "outDir": "../dist/test",
-    "types": ["mocha", "node"]
+    "types": ["mocha"],
+    "lib": ["es2019", "ES2020.BigInt"]
   },
   "references": [
     {
