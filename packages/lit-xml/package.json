@@ -15,7 +15,7 @@
   ],
   "main": "dist/src/index.js",
   "dependencies": {
-    "fast-xml-parser": "^3.16.0"
+    "fast-xml-parser": "^4.0.1"
   },
   "scripts": {
     "test": "nyc --exclude-after-remap=false --exclude \"dist/test/**\" --check-coverage --reporter=html --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha \"dist/test/**/*.js\""
