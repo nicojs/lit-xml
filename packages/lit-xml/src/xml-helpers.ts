@@ -1,6 +1,6 @@
 import { XmlFragment } from './xml-fragment';
 import { LitXmlOptions } from './lit-xml-options';
-import { j2xParser as J2xParser, parse, J2xOptions, X2jOptions } from 'fast-xml-parser';
+import { X2jOptions, XmlBuilderOptions, XMLParser, XMLBuilder } from 'fast-xml-parser';
 
 export function valueToString(value: unknown): string {
   if (value instanceof XmlFragment) {
@@ -25,28 +25,26 @@ function isJsonSerializable(value: any): value is { toJSON(): string } {
   return value && typeof value.toJSON === 'function';
 }
 
-const fastXmlOptions: Partial<J2xOptions & X2jOptions> = {
+const fastXmlOptions: Partial<XmlBuilderOptions & X2jOptions> = {
   attributeNamePrefix: '',
-  attrNodeName: '$attr', //default is 'false'
+  attributesGroupName: '$attr', //default is 'false'
   textNodeName: '#text',
   ignoreAttributes: false,
-  ignoreNameSpace: false,
+  removeNSPrefix: false,
   allowBooleanAttributes: false,
-  parseNodeValue: true,
+  suppressBooleanAttributes: false,
+  parseTagValue: true,
   parseAttributeValue: false,
   trimValues: true,
-  cdataTagName: '__cdata', //default is 'false'
-  cdataPositionChar: '\\c',
-  parseTrueNumberOnly: false,
-  arrayMode: false,
-  supressEmptyNode: true,
+  cdataPropName: '__cdata', //default is 'false'
+  suppressEmptyNode: true,
 };
 
 export function format(xml: string, { format, indent }: Pick<LitXmlOptions, 'format' | 'indent'>): string {
   if (format) {
     const indentBy = new Array(indent).fill(' ').join('');
-    const xmlAsJson = parse(xml, fastXmlOptions);
-    return new J2xParser({ ...fastXmlOptions, format, indentBy }).parse(xmlAsJson);
+    const xmlAsJson = new XMLParser(fastXmlOptions).parse(xml, fastXmlOptions);
+    return new XMLBuilder({ ...fastXmlOptions, format, indentBy }).build(xmlAsJson);
   } else {
     return xml;
   }
