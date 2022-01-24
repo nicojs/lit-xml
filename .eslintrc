@@ -1,8 +1,9 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "parserOptions": {
-    "project": "tsconfig.lint.json"
+    "project": ["packages/*/src/tsconfig.json", "packages/*/test/tsconfig.json"]
   },
   "rules": {
     "@typescript-eslint/no-use-before-define": "off",
