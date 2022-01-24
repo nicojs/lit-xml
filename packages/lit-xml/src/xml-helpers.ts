@@ -18,11 +18,13 @@ export function valueToString(value: unknown): string {
   if (Array.isArray(value)) {
     return value.map(valueToString).join('');
   }
+  // eslint-disable-next-line
   return sanitize((value as any).toString());
 }
 
-function isJsonSerializable(value: any): value is { toJSON(): string } {
-  return value && typeof value.toJSON === 'function';
+function isJsonSerializable(value: unknown): value is { toJSON(): string } {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  return Boolean(value) && typeof (value as any).toJSON === 'function';
 }
 
 const fastXmlOptions: Partial<XmlBuilderOptions & X2jOptions> = {
@@ -43,8 +45,8 @@ const fastXmlOptions: Partial<XmlBuilderOptions & X2jOptions> = {
 export function format(xml: string, { format, indent }: Pick<LitXmlOptions, 'format' | 'indent'>): string {
   if (format) {
     const indentBy = new Array(indent).fill(' ').join('');
-    const xmlAsJson = new XMLParser(fastXmlOptions).parse(xml, fastXmlOptions);
-    return new XMLBuilder({ ...fastXmlOptions, format, indentBy }).build(xmlAsJson);
+    const xmlAsJson: unknown = new XMLParser(fastXmlOptions).parse(xml, fastXmlOptions);
+    return new XMLBuilder({ ...fastXmlOptions, format, indentBy }).build(xmlAsJson) as string;
   } else {
     return xml;
   }
