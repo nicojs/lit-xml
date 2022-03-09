@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/nicojs/lit-xml/compare/v0.4.6...v0.5.0) (2022-03-09)
+
+
+### Features
+
+* minimum node version 12 ([ff32409](https://github.com/nicojs/lit-xml/commit/ff324090384031a6b259f57b5013de327df6ec98))
+
+
+
+
+
 ## [0.4.6](https://github.com/nicojs/lit-xml/compare/v0.4.5...v0.4.6) (2021-11-10)
 
 
