@@ -4,13 +4,13 @@ import { expect } from 'chai';
 describe('xml-helpers', () => {
   describe(format.name, () => {
     it('should indent the xml document', () => {
-      expect(format('<foo><bar /></foo>', { format: true, indent: 2 })).eq('<foo>\n  <bar/>\n</foo>\n');
+      expect(format('<foo><bar /></foo>', { format: true, indent: 2 })).eq('\n<foo>\n  <bar/>\n</foo>');
     });
     it('should do nothing if format = false', () => {
       expect(format('<foo><bar /></foo>', { format: false, indent: 2 })).eq('<foo><bar /></foo>');
     });
     it('should format xml elements with attributes', () => {
-      expect(format('<foo bar="baz"></foo>', { format: true, indent: 2 })).eq('<foo bar="baz"/>\n');
+      expect(format('<foo bar="baz"></foo>', { format: true, indent: 2 })).eq('\n<foo bar="baz"/>');
     });
   });
 
