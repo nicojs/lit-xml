@@ -29,7 +29,7 @@ function isJsonSerializable(value: unknown): value is { toJSON(): string } {
 
 const fastXmlOptions: Partial<XmlBuilderOptions & X2jOptions> = {
   attributeNamePrefix: '',
-  attributesGroupName: '$attr', //default is 'false'
+  preserveOrder: true, //to keep the formatted result same
   textNodeName: '#text',
   ignoreAttributes: false,
   removeNSPrefix: false,
