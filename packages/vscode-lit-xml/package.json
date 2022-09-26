@@ -13,6 +13,7 @@
   },
   "scripts": {
     "publish": "vsce publish -p $VSCODE_TOKEN",
+    "postpublish": "ovsx publish -p $OVSX_TOKEN",
     "build": "vsce package"
   },
   "engines": {
@@ -66,6 +67,7 @@
     "virtualWorkspaces": true
   },
   "devDependencies": {
+    "ovsx": "^0.5.1",
     "vsce": "^2.2.0"
   }
 }
