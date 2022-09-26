@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@v3
         with:
@@ -34,3 +34,4 @@ jobs:
         run: npx lerna publish from-git --yes
         env:
           VSCODE_TOKEN: ${{ secrets.VSCODE_TOKEN }}
+          OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
