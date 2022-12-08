@@ -67,7 +67,7 @@
     "virtualWorkspaces": true
   },
   "devDependencies": {
-    "ovsx": "^0.6.0",
+    "ovsx": "^0.7.0",
     "vsce": "^2.2.0"
   }
 }
