@@ -4,7 +4,7 @@
   "description": "Syntax highlighting xml inside of JavaScript and TypeScript lit-xml tagged template strings",
   "publisher": "hugo-vrijswijk",
   "license": "Apache-2.0",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
@@ -67,7 +67,7 @@
     "virtualWorkspaces": true
   },
   "devDependencies": {
-    "ovsx": "^0.8.0",
-    "@vscode/vsce": "^2.19.0"
+    "@vscode/vsce": "^2.19.0",
+    "ovsx": "^0.8.0"
   }
 }
