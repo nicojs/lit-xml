@@ -12,8 +12,8 @@
     "directory": "packages/vscode-lit-xml"
   },
   "scripts": {
-    "publish": "vsce publish -p $VSCODE_TOKEN",
-    "postpublish": "ovsx publish -p $OVSX_TOKEN",
+    "publish": "vsce publish --no-dependencies -p $VSCODE_TOKEN",
+    "postpublish": "ovsx publish --no-dependencies -p $OVSX_TOKEN",
     "build": "vsce package --no-dependencies"
   },
   "engines": {
