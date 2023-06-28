@@ -4,8 +4,10 @@
   "private": true,
   "description": "The monorepo for Lit XML",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "postinstall": "lerna bootstrap && link-parent-bin",
     "start": "tsc -b --watch",
     "all": "npm run clean && npm run build && npm run lint && npm run test",
     "build": "tsc -b && lerna run build --stream",
@@ -31,8 +33,7 @@
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "lerna": "^6.0.0",
-    "link-parent-bin": "^3.0.0",
+    "lerna": "^7.1.0",
     "mocha": "^10.0.0",
     "nyc": "^15.0.1",
     "prettier": "^2.0.5",

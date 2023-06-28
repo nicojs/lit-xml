@@ -14,7 +14,7 @@
   "scripts": {
     "publish": "vsce publish -p $VSCODE_TOKEN",
     "postpublish": "ovsx publish -p $OVSX_TOKEN",
-    "build": "vsce package"
+    "build": "vsce package --no-dependencies"
   },
   "engines": {
     "vscode": "^1.32.0"
@@ -68,6 +68,6 @@
   },
   "devDependencies": {
     "ovsx": "^0.8.0",
-    "vsce": "^2.2.0"
+    "@vscode/vsce": "^2.19.0"
   }
 }
