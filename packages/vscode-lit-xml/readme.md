@@ -1,4 +1,7 @@
-[![](https://vsmarketplacebadge.apphb.com/version/hugo-vrijswijk.vscode-lit-xml.svg)](https://marketplace.visualstudio.com/items?itemName=hugo-vrijswijk.vscode-lit-xml)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/hugo-vrijswijk.vscode-lit-xml)](https://marketplace.visualstudio.com/items?itemName=hugo-vrijswijk.vscode-lit-xml)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/hugo-vrijswijk.vscode-lit-xml)](https://marketplace.visualstudio.com/items?itemName=hugo-vrijswijk.vscode-lit-xml)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/hugo-vrijswijk.vscode-lit-xml)](https://marketplace.visualstudio.com/items?itemName=hugo-vrijswijk.vscode-lit-xml)
+[![OpenVSX Downloads](https://shields.io/open-vsx/dt/hugo-vrijswijk/vscode-lit-xml?label=OpenVSX%20Downloads)](https://open-vsx.org/extension/hugo-vrijswijk/vscode-lit-xml)
 
 # Lit XML VS Code extension 🔥
 
