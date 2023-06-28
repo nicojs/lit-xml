@@ -16,12 +16,11 @@
         "--colors",
         "--recursive",
         "--require",
-        "source-map-support/register",
-        "${workspaceFolder}/packages/lit-xml/dist/test"
+        "esbuild-register",
+        "${workspaceFolder}/packages/lit-xml/test/**/*.ts"
       ],
       "internalConsoleOptions": "openOnSessionStart",
       "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/packages/*/dist/**/*.js"]
     }
   ]
 }

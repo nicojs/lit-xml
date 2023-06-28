@@ -1,11 +1,8 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "src"
-    },
-    {
-      "path": "test"
-    }
-  ]
+  "extends": "../../tsconfig.settings.json",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "noEmit": true
+  },
+  "exclude": ["dist/**/*"]
 }
