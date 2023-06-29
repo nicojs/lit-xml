@@ -10,6 +10,9 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -33,3 +36,4 @@ jobs:
         env:
           VSCODE_TOKEN: ${{ secrets.VSCODE_TOKEN }}
           OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
