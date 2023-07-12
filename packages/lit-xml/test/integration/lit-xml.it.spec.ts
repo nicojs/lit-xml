@@ -18,7 +18,7 @@ describe('LitXml integration', () => {
   it('should allow `arr.map` to construct xml documents', () => {
     const people = [{ name: 'foo' }, { name: 'bar' }];
     expect(xml`<people>${people.map((p) => xml`<person>${p.name}</person>`)}</people>`.toString()).eq(
-      '<people><person>foo</person><person>bar</person></people>'
+      '<people><person>foo</person><person>bar</person></people>',
     );
   });
 
@@ -41,7 +41,7 @@ describe('LitXml integration', () => {
       nonPrimitives.forEach(
         (p) =>
           // @ts-expect-error non-primitives are not allowed
-          strictXml`<foo>${p}</foo>`
+          strictXml`<foo>${p}</foo>`,
       );
     });
 
@@ -50,7 +50,7 @@ describe('LitXml integration', () => {
       nonPrimitives.forEach(
         (p) =>
           // @ts-expect-error null or undefined are not allowed
-          strictXml`<foo>${p}</foo>`
+          strictXml`<foo>${p}</foo>`,
       );
     });
 

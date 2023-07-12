@@ -20,7 +20,7 @@
         "${workspaceFolder}/packages/lit-xml/test/**/*.ts"
       ],
       "internalConsoleOptions": "openOnSessionStart",
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }
