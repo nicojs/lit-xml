@@ -2,7 +2,11 @@ import { valueToString, format } from './xml-helpers';
 import { LitXmlOptions } from './lit-xml-options';
 
 export class XmlFragment {
-  constructor(private xmlLiterals: TemplateStringsArray, private values: unknown[], private options: LitXmlOptions) {}
+  constructor(
+    private xmlLiterals: TemplateStringsArray,
+    private values: unknown[],
+    private options: LitXmlOptions,
+  ) {}
 
   public toString(): string {
     const xml = this.toStringRaw();

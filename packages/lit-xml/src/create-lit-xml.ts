@@ -16,7 +16,7 @@ export type XmlTemplateLiteral = XmlTemplateLiteralTag<unknown>;
 export type StrictXmlTemplateLiteral = XmlTemplateLiteralTag<XmlPrimitive>;
 
 export function createLitXml<T extends Partial<LitXmlOptions>>(
-  overrideOptions?: T
+  overrideOptions?: T,
 ): XmlTemplateLiteralTag<T extends { strictTemplateValues: true } ? XmlPrimitive : unknown> {
   const options = Object.freeze({ ...DEFAULT_OPTIONS, ...overrideOptions });
   return function xml(xmlLiterals: TemplateStringsArray, ...values: unknown[]): XmlFragment {
