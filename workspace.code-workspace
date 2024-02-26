@@ -2,19 +2,19 @@
   "folders": [
     {
       "path": ".",
-      "name": "parent"
+      "name": "parent",
     },
     {
-      "path": "packages/lit-xml"
+      "path": "packages/lit-xml",
     },
     {
-      "path": "packages/vscode-lit-xml"
-    }
+      "path": "packages/vscode-lit-xml",
+    },
   ],
   "settings": {
-    "task.autoDetect": "off"
+    "task.autoDetect": "off",
   },
   "extensions": {
-    "recommendations": ["streetsidesoftware.code-spell-checker", "esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "hugo-vrijswijk.vscode-lit-xml"]
-  }
+    "recommendations": ["streetsidesoftware.code-spell-checker", "esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "hugo-vrijswijk.vscode-lit-xml"],
+  },
 }
