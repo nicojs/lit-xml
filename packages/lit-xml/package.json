@@ -26,7 +26,7 @@
   },
   "scripts": {
     "test": "c8 --exclude \"test/**\" --check-coverage --reporter=html --reporter=text --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha --require esbuild-register \"test/**/*.ts\"",
-    "build": "tsup-node src/index.ts --dts --sourcemap --format esm,cjs --target node16"
+    "build": "tsup-node src/index.ts --dts --sourcemap --format esm,cjs --target node18"
   },
   "repository": {
     "url": "https://github.com/nicojs/lit-xml.git",
@@ -36,6 +36,6 @@
   "homepage": "https://github.com/nicojs/lit-xml/tree/master/packages/lit-xml#readme",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+    "node": ">=18.0.0"
   }
 }
