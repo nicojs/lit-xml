@@ -68,6 +68,6 @@
   },
   "devDependencies": {
     "@vscode/vsce": "^2.19.0",
-    "ovsx": "^0.8.0"
+    "ovsx": "^0.9.1"
   }
 }
