@@ -12,7 +12,7 @@ describe('LitXml integration', () => {
 
   it('should format the xml literal', () => {
     const xml = createLitXml({ format: true });
-    expect(xml`<baz><foo bar="${true}">${42}</foo></baz>`.toString()).eq('<baz>\n  <foo bar="true">42</foo>\n</baz>\n');
+    expect(xml`<baz><foo bar="${true}">${42}</foo></baz>`.toString()).eq('\n<baz>\n  <foo bar="true">\n    42\n  </foo>\n</baz>');
   });
 
   it('should allow `arr.map` to construct xml documents', () => {
