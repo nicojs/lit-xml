@@ -36,6 +36,6 @@
     "rimraf": "^6.0.1",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "typescript-eslint": "^7.8.0"
+    "typescript-eslint": "^8.1.0"
   }
 }
