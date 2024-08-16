@@ -67,7 +67,7 @@
     "virtualWorkspaces": true
   },
   "devDependencies": {
-    "@vscode/vsce": "^2.19.0",
+    "@vscode/vsce": "^3.0.0",
     "ovsx": "^0.9.1"
   }
 }
