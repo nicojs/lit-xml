@@ -55,6 +55,7 @@ describe('LitXml integration', () => {
     });
 
     it('should allow any value when strictTemplateValues is false', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       xml`<foo>${new Date()}</foo>`;
     });
   });
