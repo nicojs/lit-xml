@@ -1,5 +1,5 @@
-import { LitXmlOptions } from './lit-xml-options';
-import { XmlFragment } from './xml-fragment';
+import { LitXmlOptions } from './lit-xml-options.js';
+import { XmlFragment } from './xml-fragment.js';
 
 const DEFAULT_OPTIONS: Readonly<LitXmlOptions> = {
   format: false,

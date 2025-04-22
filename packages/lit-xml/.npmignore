@@ -1,4 +1,4 @@
 **
-!dist/**/*
+!dist/src/**/*
 !src/**/*.ts
 *.tsbuildinfo

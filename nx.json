@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nrwl/nx/master/packages/nx/schemas/nx-schema.json",
+  "extends": "nx/presets/npm.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "{workspaceRoot}/package-lock.json", { "runtime": "node -v" }],
+    "production": ["!{projectRoot}/test/**/*", "!{workspaceRoot}/eslint.config.mjs"]
+  },
+  "targetDefaults": {
+    "build": { "inputs": ["default", "^production"], "dependsOn": ["^build"], "outputs": ["{projectRoot}/dist"], "cache": true },
+    "test": { "inputs": ["default", "^production"], "dependsOn": ["build"], "cache": true }
+  }
+}

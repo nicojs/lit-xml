@@ -1,5 +1,5 @@
-import { XmlFragment } from './xml-fragment';
-import { LitXmlOptions } from './lit-xml-options';
+import { XmlFragment } from './xml-fragment.js';
+import { LitXmlOptions } from './lit-xml-options.js';
 import { X2jOptions, XmlBuilderOptions, XMLParser, XMLBuilder } from 'fast-xml-parser';
 
 export function valueToString(value: unknown): string {
