@@ -22,7 +22,7 @@
     }
   },
   "dependencies": {
-    "fast-xml-parser": "^4.0.1"
+    "fast-xml-parser": "^5.2.1"
   },
   "scripts": {
     "test": "c8 --exclude \"test/**\" --check-coverage --reporter=html --reporter=text --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha --require esbuild-register \"test/**/*.ts\"",
