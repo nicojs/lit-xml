@@ -4,3 +4,4 @@ dist
 reports
 *.vsix
 *.tsbuildinfo
+.nx/

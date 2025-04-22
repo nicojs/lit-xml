@@ -1,4 +1,4 @@
-import { createLitXml, XmlTemplateLiteral, validators, InvalidXmlError, xml } from '../../src';
+import { createLitXml, XmlTemplateLiteral, validators, InvalidXmlError, xml } from '../../src/index.js';
 import { expect } from 'chai';
 
 describe(createLitXml.name, () => {

@@ -8,7 +8,7 @@
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicojs/lit-xml.git",
+    "url": "git+https://github.com/nicojs/lit-xml.git",
     "directory": "packages/vscode-lit-xml"
   },
   "scripts": {

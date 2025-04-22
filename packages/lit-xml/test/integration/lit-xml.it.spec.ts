@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { xml, createLitXml, StrictXmlTemplateLiteral, XmlPrimitive } from '../../src';
+import { xml, createLitXml, StrictXmlTemplateLiteral, XmlPrimitive } from '../../src/index.js';
 
 describe('LitXml integration', () => {
   it('should sanitize XML', () => {

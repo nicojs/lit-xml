@@ -1,4 +1,4 @@
-import { format, valueToString, sanitize } from '../../src/xml-helpers';
+import { format, valueToString, sanitize } from '../../src/xml-helpers.js';
 import { expect } from 'chai';
 
 describe('xml-helpers', () => {

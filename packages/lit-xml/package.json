@@ -14,22 +14,19 @@
     "well-formed"
   ],
   "type": "module",
-  "main": "./dist/index.cjs",
+  "main": "./dist/src/index.js",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/src/index.js"
   },
   "dependencies": {
     "fast-xml-parser": "^5.2.1"
   },
   "scripts": {
-    "test": "c8 --exclude \"test/**\" --check-coverage --reporter=html --reporter=text --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha --require esbuild-register \"test/**/*.ts\"",
-    "build": "tsup-node src/index.ts --dts --sourcemap --format esm,cjs --target node18"
+    "test": "c8 --exclude \"dist/test/**\" --check-coverage --reporter=html --reporter=text --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha --node-option \"enable-source-maps\" \"dist/test/**/*.js\"",
+    "build": "tsc -b"
   },
   "repository": {
-    "url": "https://github.com/nicojs/lit-xml.git",
+    "url": "git+https://github.com/nicojs/lit-xml.git",
     "directory": "packages/lit-xml",
     "type": "git"
   },

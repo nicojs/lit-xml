@@ -1,5 +1,5 @@
-import { valueToString, format } from './xml-helpers';
-import { LitXmlOptions } from './lit-xml-options';
+import { valueToString, format } from './xml-helpers.js';
+import { LitXmlOptions } from './lit-xml-options.js';
 
 export class XmlFragment {
   constructor(

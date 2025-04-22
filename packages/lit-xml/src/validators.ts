@@ -1,5 +1,5 @@
 import { XMLValidator } from 'fast-xml-parser';
-import { InvalidXmlError } from './invalid-xml-error';
+import { InvalidXmlError } from './invalid-xml-error.js';
 
 export function isWellFormed(xml: string) {
   const validationResult = XMLValidator.validate(xml);

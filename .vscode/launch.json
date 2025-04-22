@@ -10,14 +10,14 @@
       "name": "Run Tests",
       "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
       "args": [
+        "--node-option",
+        "\"enable-source-maps\"",
         "-u",
         "bdd",
         "--no-timeout",
         "--colors",
         "--recursive",
-        "--require",
-        "esbuild-register",
-        "${workspaceFolder}/packages/lit-xml/test/**/*.ts"
+        "${workspaceFolder}/packages/lit-xml/dist/test/**/*.js"
       ],
       "internalConsoleOptions": "openOnSessionStart",
       "skipFiles": ["<node_internals>/**"]

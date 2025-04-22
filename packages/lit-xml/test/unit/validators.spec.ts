@@ -1,6 +1,6 @@
-import { isWellFormed } from '../../src/validators';
+import { isWellFormed } from '../../src/validators.js';
 import { expect } from 'chai';
-import { InvalidXmlError } from '../../src/invalid-xml-error';
+import { InvalidXmlError } from '../../src/invalid-xml-error.js';
 
 describe('validators', () => {
   describe(isWellFormed.name, () => {

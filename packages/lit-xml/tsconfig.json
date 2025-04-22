@@ -1,8 +1,1 @@
-{
-  "extends": "../../tsconfig.settings.json",
-  "compilerOptions": {
-    "moduleResolution": "bundler",
-    "noEmit": true
-  },
-  "exclude": ["dist/**/*"]
-}
+{ "extends": "../../tsconfig.settings.json", "compilerOptions": { "outDir": "dist" }, "exclude": ["dist/**/*"] }

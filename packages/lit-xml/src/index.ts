@@ -1,6 +1,6 @@
-import * as validators from './validators';
-export * from './create-lit-xml';
-export * from './invalid-xml-error';
-export * from './validator';
-export * from './xml-fragment';
+import * as validators from './validators.js';
+export * from './create-lit-xml.js';
+export * from './invalid-xml-error.js';
+export * from './validator.js';
+export * from './xml-fragment.js';
 export { validators };
