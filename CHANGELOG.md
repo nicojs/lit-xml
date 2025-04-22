@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/nicojs/lit-xml/compare/v0.6.2...v0.7.0) (2025-04-22)
+
+**Note:** Version bump only for package monorepo
+
 ## [0.6.2](https://github.com/nicojs/lit-xml/compare/v0.6.1...v0.6.2) (2024-02-26)
 
 **Note:** Version bump only for package monorepo

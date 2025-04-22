@@ -1,6 +1,6 @@
 {
   "name": "lit-xml",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Burning your XML documents to the ground? Yes please. In the mean time, let's use lit-xml.",
   "author": {
     "name": "Nico Jansen",
