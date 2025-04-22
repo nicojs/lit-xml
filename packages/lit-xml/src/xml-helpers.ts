@@ -46,19 +46,13 @@ export function format(xml: string, { format, indent }: Pick<LitXmlOptions, 'for
   if (format) {
     const indentBy = new Array(indent).fill(' ').join('');
     const xmlAsJson: unknown = new XMLParser(fastXmlOptions).parse(xml, fastXmlOptions);
-    return new XMLBuilder({ ...fastXmlOptions, format, indentBy }).build(xmlAsJson) as string;
+    return new XMLBuilder({ ...fastXmlOptions, format, indentBy }).build(xmlAsJson);
   } else {
     return xml;
   }
 }
 
-const XML_ESCAPE_MAP = Object.freeze({
-  ['&']: '&amp;',
-  ["'"]: '&apos;',
-  ['"']: '&quot;',
-  ['<']: '&lt;',
-  ['>']: '&gt;',
-});
+const XML_ESCAPE_MAP = Object.freeze({ ['&']: '&amp;', ["'"]: '&apos;', ['"']: '&quot;', ['<']: '&lt;', ['>']: '&gt;' });
 
 const XML_SPECIAL_CHAR_REGEX = new RegExp(`([${Object.keys(XML_ESCAPE_MAP).join('')}])`, 'g');
 
