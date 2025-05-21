@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { xml, createLitXml, StrictXmlTemplateLiteral, XmlPrimitive } from '../../src/index.js';
+import { xml, createLitXml, StrictXmlTemplateLiteral, XmlPrimitive, unsafeXML } from '../../src/index.js';
 
 describe('LitXml integration', () => {
   it('should sanitize XML', () => {
@@ -20,6 +20,21 @@ describe('LitXml integration', () => {
     expect(xml`<people>${people.map((p) => xml`<person>${p.name}</person>`)}</people>`.toString()).eq(
       '<people><person>foo</person><person>bar</person></people>',
     );
+  });
+
+  it('should allow unsafe XML with `unsafeXML`', () => {
+    const input = xml`<foo>${unsafeXML('<bar></bar>')}</foo>`;
+    expect(input.toString()).eq('<foo><bar></bar></foo>');
+  });
+
+  it('should allow unsafe nested xml', () => {
+    const input = xml`<foo>${xml`<bar>${unsafeXML(`<baz>${unsafeXML('</baz>')}`)}</bar>`}</foo>`;
+    expect(input.toString()).eq('<foo><bar><baz></baz></bar></foo>');
+  });
+
+  it('should allow unsafe XML in CDATA', () => {
+    const input = xml`<foo><![CDATA[${unsafeXML('<bar></bar>')}]]></foo>`;
+    expect(input.toString()).eq('<foo><![CDATA[<bar></bar>]]></foo>');
   });
 
   /*

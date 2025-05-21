@@ -1,10 +1,13 @@
-import { XmlFragment } from './xml-fragment.js';
+import { UnsafeXmlFragment, XmlFragment } from './xml-fragment.js';
 import { LitXmlOptions } from './lit-xml-options.js';
 import { X2jOptions, XmlBuilderOptions, XMLParser, XMLBuilder } from 'fast-xml-parser';
 
 export function valueToString(value: unknown): string {
   if (value instanceof XmlFragment) {
     return value.toStringRaw();
+  }
+  if (value instanceof UnsafeXmlFragment) {
+    return value.toString();
   }
   if (value === null) {
     return 'null';

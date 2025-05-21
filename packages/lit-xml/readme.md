@@ -38,7 +38,7 @@ Importing `xml` will give you the _default xml template literal_. It will saniti
 A more advanced scenario:
 
 ```ts
-import { createLitXml } from 'lit-xml';
+import { createLitXml, validators, unsafeXML } from 'lit-xml';
 const xml = createLitXml({
   format: true,
   validators: [validators.isWellFormed],
@@ -59,6 +59,13 @@ xml`<people>${people.map((p) => xml`<person>${p.name}</person>`)}</people>`.toSt
 //      <person>foo</person>
 //      <person>bar</person>
 //    </people>`
+
+// Dynamic html retrieved from a CMS
+const htmlFragment = `<h1>Hello world</h1>`;
+xml`<textHtml><![CDATA[${unsafeXML(htmlFragment)}]]></textHtml>`.toString();
+// => `<textHtml>
+//      <![CDATA[<h1>Hello world</h1>]]>
+//    </textHtml>`
 ```
 
 In this example, the `createLitXml` factory method is used to create a _custom xml template literal_.
@@ -70,7 +77,8 @@ In this case it will validate that the XML document is well-formed and it will b
 💄 [vscode plugin](https://github.com/nicojs/lit-xml/tree/master/packages/vscode-lit-xml#lit-xml-vs-code-extension-) for syntax highlighting  
 🚿 Interpolated values are sanitized  
 📐 Configurable [well formed](https://www.w3resource.com/xml/well-formed.php) validation using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)  
-👓 Configurable formatting output using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)
+👓 Configurable formatting output using [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)  
+🤕 Allow additions of dynamic XML with `unsafeXML`
 
 ## 💭 Motivation
 
