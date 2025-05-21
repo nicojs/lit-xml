@@ -1,3 +1,4 @@
+import { unsafeXml } from '../../src/unsafe-xml.js';
 import { format, valueToString, sanitize } from '../../src/xml-helpers.js';
 import { expect } from 'chai';
 
@@ -38,6 +39,9 @@ describe('xml-helpers', () => {
     });
     it('should sanitize the value', () => {
       expect(valueToString('<foo attr="test\'"></foo>')).eq('&lt;foo attr=&quot;test&apos;&quot;&gt;&lt;/foo&gt;');
+    });
+    it('should not sanitize unsafe XML', () => {
+      expect(valueToString(unsafeXml('<foo attr="bar"></foo>'))).eq('<foo attr="bar"></foo>');
     });
   });
 
