@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/nicojs/lit-xml/compare/v0.7.0...v0.8.0) (2025-05-21)
+
+### Features
+
+- **dynamic xml:** allow including dynamic XML using `unsafeXml` ([#905](https://github.com/nicojs/lit-xml/issues/905)) ([020d2d9](https://github.com/nicojs/lit-xml/commit/020d2d9180944919ca7dc712d62cb067a7d2e900))
+
 # [0.7.0](https://github.com/nicojs/lit-xml/compare/v0.6.2...v0.7.0) (2025-04-22)
 
 **Note:** Version bump only for package monorepo
