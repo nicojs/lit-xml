@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { expect } from 'chai';
 import { xml, createLitXml, StrictXmlTemplateLiteral, XmlPrimitive, unsafeXML } from '../../src/index.js';
 
