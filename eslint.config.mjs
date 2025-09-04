@@ -1,10 +1,8 @@
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
-/**
- * @type {import('eslint').Linter.FlatConfig[]}
- */
-export default [
+export default defineConfig(
   eslint.configs.recommended,
   tseslint.configs.eslintRecommended,
   ...tseslint.configs.recommendedTypeChecked,
@@ -31,4 +29,4 @@ export default [
   {
     ignores: ['**/dist/', '**/.stryker-tmp/', '**/reports/'],
   },
-];
+);
