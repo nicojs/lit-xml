@@ -32,7 +32,7 @@ function isJsonSerializable(value: unknown): value is { toJSON(): string } {
 
 const fastXmlOptions: Partial<XmlBuilderOptions & X2jOptions> = {
   attributeNamePrefix: '',
-  attributesGroupName: '$attr', //default is 'false'
+  preserveOrder: true, //to keep the formatted result same
   textNodeName: '#text',
   ignoreAttributes: false,
   removeNSPrefix: false,
@@ -43,6 +43,13 @@ const fastXmlOptions: Partial<XmlBuilderOptions & X2jOptions> = {
   trimValues: true,
   cdataPropName: '__cdata', //default is 'false'
   suppressEmptyNode: true,
+  // @ts-expect-error It's missing in options type but it's there available for XMLBuilder
+  entities: [
+    { regex: new RegExp('&', 'g'), val: '&amp;' }, //it must be on top
+    { regex: new RegExp('>', 'g'), val: '&gt;' },
+    { regex: new RegExp('<', 'g'), val: '&lt;' },
+    { regex: new RegExp('"', 'g'), val: '&quot;' },
+  ],
 };
 
 export function format(xml: string, { format, indent }: Pick<LitXmlOptions, 'format' | 'indent'>): string {
