@@ -1,1 +1,1 @@
-{ "extends": "../../tsconfig.settings.json", "compilerOptions": { "outDir": "dist" }, "exclude": ["dist/**/*"] }
+{ "extends": "../../tsconfig.settings.json", "compilerOptions": { "outDir": "dist", "types": ["mocha"] }, "exclude": ["dist/**/*"] }
