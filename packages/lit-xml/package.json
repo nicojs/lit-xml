@@ -19,7 +19,7 @@
     ".": "./dist/src/index.js"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.7.3"
+    "fast-xml-parser": "^5.8.0"
   },
   "scripts": {
     "test": "c8 --exclude \"dist/test/**\" --check-coverage --reporter=html --reporter=text --report-dir=reports/coverage --lines 100 --functions 100 --branches 100 mocha --node-option \"enable-source-maps\" \"dist/test/**/*.js\"",
