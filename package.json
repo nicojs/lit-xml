@@ -35,5 +35,9 @@
     "rimraf": "^6.0.1",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.31.0"
+  },
+  "allowScripts": {
+    "nx": true,
+    "@vscode/vsce-sign": true
   }
 }
